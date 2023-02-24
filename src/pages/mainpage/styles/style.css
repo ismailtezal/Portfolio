@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Poppins";
+    list-style-type: none;
+}
+
+:root{
+    --bg-color:#090909;
+    --layout-color:#1C1C1C;
+    --text-color:#AAAAAA;
+    --text-hover-color:#dfdfdf;
+}
+
+body{
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+}
+
+.navbar-container .navbar{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-container .navbar .navbar-item{
+    color: var(--text-color);
+    cursor: pointer ;
+    padding-left:14px;
+    padding-right:14px; 
+}
+
+.navbar-container .navbar .navbar-item:hover{
+     color: var(--text-hover-color);
+}
+
+.content-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    margin-top: 150px;
+    margin-bottom: 75px;
+}
+
+.content-container .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+}
+
+.content h1{
+    font-size: 72px;
+    letter-spacing:0.125em;
+    color: white;
+    font-weight: bold;
+}
+
+.projects-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
+.projects-container .projects,p{
+    color:var(--text-color);
+    font-size: 18px;
+    font-family: "Montserrat";
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.projects-container .projects .projects-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    height: max-content;
+    width: 100%;
+    background-color: var(--layout-color);
+}
+
+.projects-item{
+    height: max-content;
+}
+
+.project-img{
+    width: 100%;
+    height: 100%;
+}
+
+.project-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 804px) {
+    .projects-container .projects .projects-layout{
+        grid-template-columns: 1fr;
+    }
+  }
